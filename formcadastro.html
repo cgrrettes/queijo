@@ -7,143 +7,168 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
-*, body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-}
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            background-image: url('https://img.freepik.com/fotos-gratis/mulher-de-frente-a-divertir-se-ao-ar-livre_23-2150725833.jpg?t=st=1725037124~exp=1725040724~hmac=7d478091a5c3ad3b007a78992b2a15f10ed4828e081f9c6d864810131399912a&w=1380');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+        }
 
-.form-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+        .form-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+            background-color: #e08d4e83; /* Cor de fundo semitransparente para o formulário */
+            border-radius: 10px;
+        }
 
-.form-holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+        .form-holder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-.form-content {
-    border: 3px solid #daa37f; 
-    padding: 40px;
-    border-radius: 10px;
-    background-color: #fff;
-    width: 100%;
-    max-width: 540px;
-}
+        .form-content {
+            border: 3px solid #daa37f; 
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 100%;
+            max-width: 540px;
+        }
 
-.form-items {
-    width: 100%;
-    text-align: left; /* Aligns text and form elements to the left */
-}
+        .form-items {
+            width: 100%;
+            text-align: left;
+        }
 
-h3 {
-    color: #000;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: left; /* Aligns heading to the left */
-}
+        h3 {
+            color: #000;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-p {
-    color: #000;
-    font-size: 17px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    text-align: left; /* Aligns paragraph to the left */
-}
+        p {
+            color: #000;
+            font-size: 17px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-    text-align: left; 
-}
-input[type=text], 
-input[type=password], 
-input[type=email], 
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
-    font-size: 15px;
-    color: #333;
-    margin-top: 5px;
-    box-sizing: border-box; 
-}
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-align: left;
+        }
 
-input:focus, select:focus {
-    border-color: #6C757D;
-    outline: none;
-}
+        input[type=text], 
+        input[type=password], 
+        input[type=email], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 15px;
+            color: #333;
+            margin-top: 5px;
+            box-sizing: border-box; 
+        }
 
-.invalid-feedback {
-    color: #ff606e;
-    display: none;
-}
+        input:focus, select:focus {
+            border-color: #6C757D;
+            outline: none;
+        }
 
-input:invalid, select:invalid {
-    border-color: #ff606e;
-}
+        .invalid-feedback {
+            color: #ff606e;
+            display: none;
+        }
 
-input:invalid ~ .invalid-feedback, select:invalid ~ .invalid-feedback {
-    display: block;
-}
+        .form-group.invalid .invalid-feedback {
+            display: block;
+        }
 
-.form-check {
-    margin: 15px 0;
-    display: flex;
-    align-items: center; 
-    text-align: left; 
-}
+        .form-group.invalid input,
+        .form-group.invalid select {
+            border-color: #ff606e;
+        }
 
-.form-check-input {
-    margin-right: 10px;
-}
+        .form-check {
+            margin: 15px 0;
+            display: flex;
+            align-items: center; 
+            text-align: left; 
+        }
 
-.form-check-label {
-    font-size: 15px;
-}
+        .form-check-input {
+            margin-right: 10px;
+        }
 
-.form-button {
-    display: flex;
-    justify-content: center; 
-    margin-top: 20px; 
-}
+        .form-check-label {
+            font-size: 15px;
+        }
 
-.play-button {
-    background-color: #daa37f;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        .form-button {
+            display: flex;
+            justify-content: center; 
+            margin-top: 20px; 
+        }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #b2bd56;
-    outline: none;
-}
+        .play-button {
+            background-color: #daa37f;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .play-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+            background-color: #b2bd56;
+            outline: none;
+        }
+
+        .footer {
+            background-color: #FEEC5C;
+            color: #000000;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -153,18 +178,18 @@ input:invalid ~ .invalid-feedback, select:invalid ~ .invalid-feedback {
                 <div class="form-items">
                     <h3>Cadastro</h3>
                     <p>Preencha os dados abaixo.</p>
-                    <form action="./homepage.html" method="GET" class="requires-validation" novalidate aria-labelledby="form-title">
-                        <div class="form-group">
+                    <form id="registrationForm" action="./homepage.html" method="GET" novalidate>
+                        <div class="form-group" id="nameGroup">
                             <label for="name">Nome Completo:</label>
                             <input id="name" class="form-control" type="text" name="Nome" placeholder="Nome Completo" required aria-required="true">
                             <div class="invalid-feedback">Por favor, insira seu nome completo.</div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="emailGroup">
                             <label for="email">Endereço de E-mail:</label>
                             <input id="email" class="form-control" type="email" name="email" placeholder="Endereço de E-mail" required aria-required="true">
                             <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="positionGroup">
                             <label for="position">Posição:</label>
                             <select id="position" class="form-select mt-3" required aria-required="true">
                                 <option value="" disabled selected>Selecione a Posição</option>
@@ -179,12 +204,58 @@ input:invalid ~ .invalid-feedback, select:invalid ~ .invalid-feedback {
                             <label for="confirm-data" class="form-check-label">Confirmo que todos os dados estão corretos</label>
                         </div>
                         <div class="form-button">
-                            <button type="submit" class="play-button">Cadastrar</button>
+                            <button type="submit" class="play-button" id="submitButton">Cadastrar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            var isValid = true;
+
+            // Remove previous validation classes
+            document.querySelectorAll('.form-group').forEach(function(group) {
+                group.classList.remove('invalid');
+            });
+
+            // Get form fields
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var position = document.getElementById('position');
+            var confirmData = document.getElementById('confirm-data');
+
+            // Validate name
+            if (!name.value.trim()) {
+                document.getElementById('nameGroup').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate email
+            if (!email.value.trim() || !email.validity.valid) {
+                document.getElementById('emailGroup').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate position
+            if (!position.value) {
+                document.getElementById('positionGroup').classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate checkbox
+            if (!confirmData.checked) {
+                confirmData.parentElement.classList.add('invalid');
+                isValid = false;
+            }
+
+            // If form is invalid, prevent submission
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
